@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.tinkhede.backendapi.maintenance.models.CityNotFoundException;
 import com.tinkhede.backendapi.maintenance.models.ExceptionResponse;
-
+//Controller which handles exceptions in API
 @ControllerAdvice
 public class ExceptionHandlingController { 	
-
+	//Method which takes care of Exception other than CityNotFoundException.
 	@ExceptionHandler(Exception.class)
 	  public ResponseEntity<ExceptionResponse>generalException(Exception e) throws Exception{
 		  
@@ -23,7 +23,7 @@ public class ExceptionHandlingController {
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse,HttpStatus.INTERNAL_SERVER_ERROR);
 	  }
 	
-	
+	//Method which takes care of CityNotFoundException.
 	@ExceptionHandler(CityNotFoundException.class)
 	  public ResponseEntity<ExceptionResponse>specialException(CityNotFoundException e) throws Exception{
 		  
