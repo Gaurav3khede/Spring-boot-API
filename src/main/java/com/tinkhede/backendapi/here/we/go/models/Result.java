@@ -1,9 +1,6 @@
 
 package com.tinkhede.backendapi.here.we.go.models;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Result
