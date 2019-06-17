@@ -23,7 +23,7 @@ public class BackendApiApplicationTests {
 	private WeatherAndCoordinatesService weatherAndCoordinatesService;
 
 	/**
-	 * This method tests that coordinates are getting returned from Google Map API.
+	 * This method tests that coordinates are getting returned from Open Street Map API.
 	 */
 	@Test
 	public void getCoordinatesFromOpenStreetMap() {
