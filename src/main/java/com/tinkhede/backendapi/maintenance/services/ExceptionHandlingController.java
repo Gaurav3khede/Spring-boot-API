@@ -1,13 +1,9 @@
 package com.tinkhede.backendapi.maintenance.services;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.tinkhede.backendapi.maintenance.models.CityNotFoundException;
 import com.tinkhede.backendapi.maintenance.models.ExceptionResponse;
 //Controller which handles exceptions in API
