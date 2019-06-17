@@ -1,10 +1,1 @@
-com.tinkhede.backendapi
-com.tinkhede.backendapi.google.map.models
-com.tinkhede.backendapi.here.we.go.models
-com.tinkhede.backendapi.maintenance.models
 com.tinkhede.backendapi.maintenance.services
-com.tinkhede.backendapi.models
-com.tinkhede.backendapi.open.street.map.models
-com.tinkhede.backendapi.open.weather.map.models
-com.tinkhede.backendapi.services
-com.tinkhede.backendapi.services.resources

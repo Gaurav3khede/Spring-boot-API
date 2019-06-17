@@ -3,6 +3,8 @@ package com.tinkhede.backendapi.maintenance.models;
 import org.springframework.stereotype.Component;
 /**
  * Custom Exception class to handle situation when city is not found.
+ * @author Gaurav
+ *
  */
 @Component
 public class CityNotFoundException extends Exception {
@@ -19,7 +21,11 @@ public class CityNotFoundException extends Exception {
 	public CityNotFoundException() {
 
 	}
-
+	/**
+	 * Parameterized constructor
+	 * @param code
+	 * @param message
+	 */
 	public CityNotFoundException(int code, String message) {
 
 		this.code = code;

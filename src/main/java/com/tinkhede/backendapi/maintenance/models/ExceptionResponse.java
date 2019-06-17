@@ -1,7 +1,11 @@
 package com.tinkhede.backendapi.maintenance.models;
 
 import org.springframework.stereotype.Component;
-
+/**
+ * Class which is the response to rest client in case of any exception/ error.
+ * @author Gaurav
+ *
+ */
 @Component
 public class ExceptionResponse {
 
