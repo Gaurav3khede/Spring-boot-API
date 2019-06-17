@@ -17,8 +17,6 @@ import com.tinkhede.backendapi.here.we.go.models.Location;
 import com.tinkhede.backendapi.here.we.go.models.Response;
 import com.tinkhede.backendapi.here.we.go.models.Result;
 import com.tinkhede.backendapi.here.we.go.models.View;
-import com.tinkhede.backendapi.open.street.map.models.OpenStreetMapDataModel;
-import com.tinkhede.backendapi.open.street.map.models.OpenStreetMapModel;
 import com.tinkhede.backendapi.open.weather.map.models.OpenWeatherMapDataModel;
 
 @Service
