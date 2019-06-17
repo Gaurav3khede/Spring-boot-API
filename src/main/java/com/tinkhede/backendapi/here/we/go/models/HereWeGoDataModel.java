@@ -1,9 +1,6 @@
 
 package com.tinkhede.backendapi.here.we.go.models;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 //This is a placeholder model which contains data fetched from Here We Go API
 public class HereWeGoDataModel
