@@ -10,7 +10,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.tinkhede.backendapi.google.map.models.LocationModel;
 import com.tinkhede.backendapi.services.WeatherAndCoordinatesService;
-
+/**
+ * 
+ * @author Gaurav
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class BackendApiApplicationTests {
@@ -23,7 +27,7 @@ public class BackendApiApplicationTests {
 	private WeatherAndCoordinatesService weatherAndCoordinatesService;
 
 	/**
-	 * This method tests that coordinates are getting returned from Open Street Map API.
+	 * This method tests that, coordinates are getting returned from Open Street Map API.
 	 */
 	@Test
 	public void getCoordinatesFromOpenStreetMap() {

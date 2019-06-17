@@ -19,6 +19,11 @@ import com.tinkhede.backendapi.here.we.go.models.Result;
 import com.tinkhede.backendapi.here.we.go.models.View;
 import com.tinkhede.backendapi.open.weather.map.models.OpenWeatherMapDataModel;
 
+/**
+ * Service class which is responsible to get data from different APIs
+ * @author Gaurav
+ *
+ */
 @Service
 @Configuration
 @PropertySource("classpath:config.properties")
@@ -35,8 +40,11 @@ public class WeatherAndCoordinatesService {
 	@Value("${openWeatherMapUrl}")
 	private String openWeatherMapUrl;
 	
-	/*Method to get Coordinates from Google Map API
-	 * @Param cityName
+	/**
+	 * Method to get Coordinates from Google Map API
+	 * @param cityName
+	 * @param googleMapKey
+	 * @return
 	 */
 	public LocationModel getCoordinatesFromGoogleMap(String cityName,String googleMapKey) {
 
@@ -50,8 +58,12 @@ public class WeatherAndCoordinatesService {
 		return null;
 
 	}
-	/*Method to get Coordinates from Here We Go API
-	 * @Param cityName
+	/**
+	 * Method to get Coordinates from Here We Go API
+	 * @param cityName
+	 * @param hereWeGoAppId
+	 * @param hereWeGoAppCode
+	 * @return
 	 */
 	public LocationModel getCoordinatesFromHereWeGo(String cityName,String hereWeGoAppId,String hereWeGoAppCode) {
 
@@ -74,8 +86,10 @@ public class WeatherAndCoordinatesService {
 		return null;
 	}
 
-	/*Method to get coordinates from Open Street Map API
-	 * @Param cityName
+	/**
+	 * Method to get coordinates from Open Street Map API
+	 * @param cityName
+	 * @return
 	 */
 	public LocationModel getCoordinatesFromOpenStreetMap(String cityName) {
 		LocationModel locationModel = new LocationModel();
@@ -87,8 +101,11 @@ public class WeatherAndCoordinatesService {
 		}
 		return null;
 	}
-	/*Method to get weather Details from Open Weather Map API
-	 * @Param cityName
+	/**
+	 * Method to get weather Details from Open Weather Map API
+	 * @param cityName
+	 * @param openWeatherMapAppId
+	 * @return
 	 */
 	public OpenWeatherMapDataModel getWeatherDetailsFromOpenWeatherMap(String cityName,String openWeatherMapAppId) {
 
@@ -97,8 +114,10 @@ public class WeatherAndCoordinatesService {
 
 	}
 
-	/*Method to calculate center point of city from multiple coordinates of city
-	 * @Param coordinates
+	/**
+	 * Method to calculate center point of city from multiple coordinates of city
+	 * @param coordinates
+	 * @return
 	 */
 	public LocationModel calculateCenterPoint(List<LocationModel> coordinates) {
 

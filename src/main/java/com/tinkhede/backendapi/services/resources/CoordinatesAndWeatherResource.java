@@ -15,14 +15,27 @@ import com.tinkhede.backendapi.models.CoordinatesAndWeatherInfoModel;
 import com.tinkhede.backendapi.models.WeatherInformation;
 import com.tinkhede.backendapi.open.weather.map.models.OpenWeatherMapDataModel;
 import com.tinkhede.backendapi.services.WeatherAndCoordinatesService;
-
+/**
+ * 
+ * @author Gaurav
+ * RestController class which handles all the requests to the API
+ */
 @RestController
 @RequestMapping("/")
 public class CoordinatesAndWeatherResource {
 
 	@Autowired
 	private WeatherAndCoordinatesService weatherAndCoordinatesService;
-
+	/**
+	 * Method which returns the center point of the city and weather information
+	 * @param cityName
+	 * @param googleMapKey
+	 * @param hereWeGoAppId
+	 * @param hereWeGoAppCode
+	 * @param openWeatherMapAppId
+	 * @return
+	 * @throws CityNotFoundException
+	 */
 	@RequestMapping(value = "/backendapi/{cityName}", method = RequestMethod.GET)
 	public CoordinatesAndWeatherInfoModel getCoordinatesAndWeatherInfo(@PathVariable("cityName") String cityName,
 			@RequestHeader(value="googleMapKey") String googleMapKey,
@@ -51,13 +64,22 @@ public class CoordinatesAndWeatherResource {
 		// Final return object
 		return getCenterPointAndWeatherDetails(weatherAndCoordinatesService,coordinates,openWeatherMapDataModel);
 	}
-	
+	/**
+	 * Method which handles invalid urls
+	 * @throws CityNotFoundException
+	 */
 	@RequestMapping("/*")
 	public void pageNotFound()
 			throws CityNotFoundException {
 		throw new CityNotFoundException(400, "Invalid URL");
 	}
-	
+	/**
+	 * Method which combines the results from different APIs and combines the same
+	 * @param weatherAndCoordinatesService
+	 * @param coordinates
+	 * @param openWeatherMapDataModel
+	 * @return
+	 */
 	private CoordinatesAndWeatherInfoModel getCenterPointAndWeatherDetails(WeatherAndCoordinatesService weatherAndCoordinatesService,
 			List<LocationModel> coordinates,OpenWeatherMapDataModel openWeatherMapDataModel) {
 		
