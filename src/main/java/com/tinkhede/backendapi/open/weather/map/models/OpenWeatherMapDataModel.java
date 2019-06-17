@@ -1,7 +1,7 @@
 package com.tinkhede.backendapi.open.weather.map.models;
 
 import java.util.List;
-
+//This is a placeholder model which contains data fetched from Open weather Map API
 public class OpenWeatherMapDataModel {
 	
 	private String name;
