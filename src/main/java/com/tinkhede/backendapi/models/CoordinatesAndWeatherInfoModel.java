@@ -1,7 +1,7 @@
 package com.tinkhede.backendapi.models;
 
 import com.tinkhede.backendapi.google.map.models.LocationModel;
-
+//This model is the placeholder for the result of API
 public class CoordinatesAndWeatherInfoModel {
 	
 	private LocationModel centerPointOfCity;
