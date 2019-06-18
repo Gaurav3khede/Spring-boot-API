@@ -18,3 +18,5 @@
        3. OpenStreetMaps 
        4. When searching for a town with name instead of coordinates, these APIs differ a bit o Weather for the given city
        5. OpenWeatherMap API 
+       
+      # JAVA Doc added and it can be found at: doc/com/tinkhede/backendapi/
